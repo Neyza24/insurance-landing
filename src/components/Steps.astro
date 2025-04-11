@@ -1,0 +1,169 @@
+---
+import { Image } from "astro:assets";
+import imgStep from "../assets/img-steps.svg";
+
+const steps = [
+  {
+    title: "Contáctanos",
+    description: "Cuéntanos cuál es tu necesidad y qué deseas incluir en tu plan.",
+    icon: "M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2",
+    color: "accent",
+    number: 1,
+  },
+  {
+    title: "Asesoramiento",
+    description:
+      "Te enviamos una cotización con todas las coberturas, beneficios y aclaramos todas tus dudas.",
+    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+    color: "accent",
+    number: 2,
+  },
+  {
+    title: "Asegúrate",
+    description: "Afiliación 100% digital, fácil y rápido. Sin trámites presenciales ni complicaciones.",
+    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+    color: "accent",
+    number: 3,
+  },
+];
+---
+
+
+<section id="steps" class="section bg-[#fcfaf6] dark:bg-gray-800/50">
+  <div class="container-custom relative z-10">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="relative fade-in" transition:animate="fade">
+  
+        <div class="w-full md:w-4/5 mx-auto">
+          <Image src={imgStep} alt="Image pasos" />
+        </div>
+      </div>
+
+      <div class="slide-up" transition:animate="slide">
+        <h2 class="font-semibold text-3xl md:text-4xl lg:text-5xl mb-6 text-secondaey-900 dark:text-white">
+          Elige tu plan ideal <br><span class="font-bold px-2 py-1 dark:bg-transparent">fácil y rápido</span> 
+        </h2>
+        
+        <p
+          class="text-xl text-gray-600 dark:text-secondary-300 mb-8 max-w-lg"
+        >
+        Accede a la mejor Medicina Prepagada del país en solo <span class="font-semibold">3 pasos</span> 
+        </p>
+        <div class="grid grid-cols-1">
+          {
+            steps.map((step, index) => (
+              <div
+                class="col-12 process-step-style relative hover-box"
+                
+              >
+                <div class="process-step-item">
+                  <div class="process-step-icon-wrap relative">
+                    <div class={`process-step-icon flex justify-center items-center mx-auto w-12 h-12 rounded-full bg-[#FFE9C4] dark:bg-${step.color}-900/30 font-semibold relative`}>
+                    <span class="relative z-[1] text-primary-900 dark:text-primary-800">
+                      0{index + 1}
+                    </span>
+                    </div>
+
+                    <div class="box-overlay bg-red-400 rounded-full"></div>
+                    <span class="progress-step-separator bg-slate-300 opacity-100"></span>
+                  </div>
+
+                  <div class="process-content ps-8 mb-8 ">
+                    <h3 class="text-xl font-semibold mb-3 text-secondary-900 dark:text-white">
+                      {step.title}
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 ">{step.description}</p>
+                  </div>
+
+                </div>
+                
+                
+              </div>
+            ))
+          }
+    
+        </div>
+    
+        <div class="mt-8">
+          <a href="https://wa.me/573186298233?text=Hola,%20me%20gustaría%20recibir%20asesoría%20personalizada" target="_blank" class="btn-primary">
+            Cotizar ahora
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 ml-2"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+
+</section>
+
+
+<style>
+
+  .process-step-style .process-step-item {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: start;
+    justify-content: start;
+    text-align: left;
+
+  }
+
+  .process-step-item .process-step-icon {
+    /* will-change: transform;
+    transition: all 350ms cubic-bezier(0.165, 0.84, 0.44, 1.7); */
+    
+
+  }
+
+  .box-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+
+  }
+
+  .progress-step-separator {
+    position: absolute;
+    width: 1px;
+    left: 50%;
+    bottom: inherit;
+    height: 100%;
+
+  }
+
+  .process-step-style:hover .process-step-icon {
+    transform: scale(1.2);
+    transition: all 350ms cubic-bezier(0.165, 0.84, 0.44, 1.7);
+    z-index: 2;
+  }
+
+  .process-content {
+    overflow: hidden;
+    flex: 1;
+    max-width: 100%;
+  }
+
+
+  .hover-box {
+    z-index: 1;
+    /* transition: all 500ms cubic-bezier(0.5, 1, 0.89, 1);
+    will-change: transform; */
+  }
+</style>

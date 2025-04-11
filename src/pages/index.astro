@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+
+import Footer from "../components/Footer.astro";
+import Steps from "../components/Steps.astro";
+import Services from "../components/Services.astro";
+import Contact from "../components/Contact.astro";
+// import Contact from '../components/Contact.astro';
+---
+
+<Layout title="Medicina Prepagada Sura">
+  <Header />
+  <main>
+    <Hero />
+    <Steps />
+    <Services />
+    <Contact />
+  </main>
+  <Footer />
+
+  <div id="floating-button-wrapper">
+    <a
+      href="https://wa.me/573186298233?text=Hola,%20me%20gustaría%20recibir%20asesoría%20personalizada"
+      target="_blank"
+      class="flex items-center bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg"
+      aria-label="Chatea con nosotros por WhatsApp"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-10 h-10"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12.001 2C6.475 2 2 6.477 2 12.004c0 1.993.521 3.892 1.507 5.574L2 22l4.51-1.48A9.97 9.97 0 0 0 12 22c5.524 0 10-4.477 10-9.996C22 6.477 17.524 2 12.001 2Zm.207 17.222h-.004a8.175 8.175 0 0 1-4.152-1.145l-.297-.177-2.973.777.793-2.9-.185-.3a8.208 8.208 0 0 1-1.26-4.378c.002-4.544 3.706-8.247 8.252-8.247a8.22 8.22 0 0 1 5.826 2.412 8.21 8.21 0 0 1 2.413 5.826c-.002 4.546-3.706 8.248-8.251 8.248Zm4.515-6.169c-.246-.124-1.444-.71-1.669-.791-.223-.082-.386-.123-.549.123s-.63.793-.772.954c-.143.16-.285.18-.531.062-.246-.123-1.038-.38-1.975-1.21-.73-.651-1.222-1.457-1.364-1.703-.143-.246-.016-.38.107-.503.11-.11.246-.285.369-.426.123-.141.164-.246.246-.41.082-.164.041-.308-.02-.431-.062-.123-.549-1.323-.753-1.813-.197-.474-.396-.41-.549-.418-.141-.007-.308-.009-.474-.009a.912.912 0 0 0-.666.308c-.225.246-.877.857-.877 2.086 0 1.23.897 2.422 1.022 2.59.123.164 1.752 2.675 4.25 3.75.595.256 1.058.409 1.42.524.597.19 1.143.164 1.574.1.48-.071 1.444-.57 1.647-1.121.203-.553.203-1.026.143-1.123-.062-.098-.226-.158-.472-.277Z"
+        ></path>
+      </svg>
+    </a>
+  </div>
+</Layout>
+
+<style>
+  #floating-button-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+</style>
+
+<script is:inline>
+  const floatBtn = document.getElementById("floating-button-wrapper");
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const viewportHeight = window.innerHeight;
+
+    floatBtn.style.top = `${scrollY + viewportHeight - 100}px`;
+  });
+</script>

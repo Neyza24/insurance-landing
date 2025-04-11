@@ -1,0 +1,241 @@
+---
+import { Image } from "astro:assets";
+import mascotaSura from "../assets/mascota-sura.png";
+
+---
+
+<section id="contact" class="section relative bg-form bg-[#FCF7F6] dark:bg-slate-800">
+  <div class="container-custom max-w-6xl">
+    <div class="">
+
+      <!-- Contenedor en dos columnas con grid -->
+      <div class="grid md:grid-cols-2">
+        <!-- left -->
+         <div class="relative bg-primary-400 p-6 md:p-10 order-2 md:order-1 pb-40 md:pb-6">
+          <div class="space-y-4">
+            <h3 class="font-semibold text-primary-100 dark:text-primary-100 mb-5">Medicina prepagada SURA</h3>
+            <ul class="space-y-3 text-primary-100 dark:text-primary-100">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-white flex-shrink-0 mt-1 bg-primary-500 rounded-full p-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>
+                  Contamos con las mejores Tarifas de Medicina Prepagada SURA, que se ajustan a tu presupuesto.
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-white flex-shrink-0 mt-1 bg-primary-500 rounded-full p-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>
+                  Disfruta de las mejores Coberturas de Medicina Prepagada SURA en Colombia.
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-white flex-shrink-0 mt-1 bg-primary-500 rounded-full p-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>
+                  Afiliación a Medicina Prepagada SURA 100% digital, afiliate desde tu casa.
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-white flex-shrink-0 mt-1 bg-primary-500 rounded-full p-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>
+                  Los Precios de Medicina Prepagada SURA, son competitivos en todo el País.
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-white flex-shrink-0 mt-1 bg-primary-500 rounded-full p-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>
+                  Nuestros Planes de Medicina Prepagada SURA, Evoluciona, Clasico y Global tienen las mejores Coberturas Nacionales e Internacionales.
+                </span>
+              </li>
+              
+            </ul>
+          </div>
+          <div class="mascota-sura-wrap">
+            <Image
+              src={mascotaSura}
+              alt="Mascota de Sura"
+              class="absolute -left-0 -bottom-10 -right-10 w-2/6 lg:w-2/5 animation-float"
+              loading="lazy"
+              width={500} />
+          </div>
+         </div>
+        
+
+        <!-- right: Formulario -->
+        <div class="bg-white dark:bg-gray-800 p-6 md:p-10 border dark:border-gray-600 order-1 md:order-2">
+          <div class="text-start mb-8">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl mb-4 text-secondary-900 dark:text-white">
+              ¿Necesitas ayuda para elegir tu plan?
+            </h2>
+            <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Uno de nuestros expertos se pondrá en contacto contigo.
+            </p>
+          </div>
+          <form
+            class="grid gap-4"
+            x-data="{ nombre: '', email: '', ciudad: '', celular: '', seguro: '', submitted: false, error: '' }"
+          >
+            <div x-show="!submitted" class="grid gap-4">
+              <input
+                type="text"
+                id="nombre"
+                x-model="nombre"
+                placeholder="Nombre completo"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
+                required
+              />
+
+
+              <input
+                type="email"
+                id="email"
+                x-model="email"
+                placeholder="Correo electrónico"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
+                required
+              />
+              
+
+              <input
+                type="text"
+                id="ciudad"
+                x-model="ciudad"
+                placeholder="Ciudad"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
+                required
+              />
+
+              <input
+                type="tel"
+                id="celular"
+                x-model="celular"
+                placeholder="Celular"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
+                required
+              />
+
+              <select
+                id="seguro"
+                x-model="seguro"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
+                required
+              >
+                <option value="" disabled selected>Selecciona un tipo de seguro</option>
+                <option value="salud">Seguro de salud</option>
+                <option value="vida">Seguro de vida</option>
+                <option value="viaje">Seguro de viaje</option>
+                <option value="mascotas">Salud para mascotas</option>
+                <option value="vehiculo">Seguro vehicular</option>
+              </select>
+
+              <p class="text-red-500 text-sm -mt-2" x-show="error" x-text="error"></p>
+
+              <button
+                type="submit"
+                class="btn-accent w-full"
+                x-on:click.prevent="
+                  if (!email || !nombre || !ciudad || !celular || !seguro) {
+                    error = 'Por favor, completa todos los campos.';
+                    return;
+                  }
+                  error = '';
+                  const mensaje = 
+      `Hola, me gustaría recibir asesoría personalizada:\n\n` +
+      `👤 Nombre: ${nombre}\n` +
+      `📧 Correo: ${email}\n` +
+      `🏙 Ciudad: ${ciudad}\n` +
+      `📱 Celular: ${celular}\n` +
+      `🛡 Tipo de seguro: ${seguro}`;
+
+    const telefonoEmpresa = '573186298233';
+    const url = `https://wa.me/${telefonoEmpresa}?text=${encodeURIComponent(mensaje)}`;
+
+    window.open(url, '_blank');
+
+                "
+              >
+                Solicitar asesoría
+              </button>
+            </div>
+
+            <!-- Mensaje de éxito -->
+            <div
+              class="text-center p-6 bg-primary-50 dark:bg-primary-900/30 rounded-lg"
+              x-show="submitted"
+              x-cloak
+            >
+              <svg class="w-12 h-12 text-primary-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">¡Gracias por tu interés!</h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                Te contactaremos pronto para ayudarte a elegir el mejor plan para ti.
+              </p>
+            </div>
+          </form>
+        </div>
+
+        
+
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+
+.animation-float {
+  animation: float 2000ms linear 500ms infinite alternate both;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(16px);
+  }
+}
+  
+  </style>
