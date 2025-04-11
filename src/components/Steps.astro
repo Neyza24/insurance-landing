@@ -32,14 +32,14 @@ const steps = [
 <section id="steps" class="section bg-[#fcfaf6] dark:bg-gray-800/50">
   <div class="container-custom relative z-10">
     <div class="grid md:grid-cols-2 gap-12 items-center">
-      <div class="relative fade-in" transition:animate="fade">
+      <div class="order-2 md:order-1 relative fade-in" transition:animate="fade">
   
         <div class="w-full md:w-4/5 mx-auto">
           <Image src={imgStep} alt="Image pasos" />
         </div>
       </div>
 
-      <div class="slide-up" transition:animate="slide">
+      <div class="order-1 md:order-2 slide-up" transition:animate="slide">
         <h2 class="font-semibold text-3xl md:text-4xl lg:text-5xl mb-6 text-secondaey-900 dark:text-white">
           Elige tu plan ideal <br><span class="font-bold px-2 py-1 dark:bg-transparent">fácil y rápido</span> 
         </h2>
@@ -102,7 +102,6 @@ const steps = [
         </div>
       </div>
 
-      
     </div>
   </div>
 
