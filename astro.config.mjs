@@ -7,6 +7,9 @@ import alpinejs from '@astrojs/alpinejs';
 export default defineConfig({
   integrations: [
     tailwind(),
-    alpinejs()
-  ]
+    alpinejs(),
+    
+  ],
+  site: 'https://Neyza24.github.io',
+  base: 'insurance-landing',
 });
