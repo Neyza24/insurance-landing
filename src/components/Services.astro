@@ -1,4 +1,12 @@
 ---
+import { Image } from "astro:assets";
+import petCard from "../assets/walking-dog.png";
+import travelCard from "../assets/nomad-travel.png";
+import planEvoluciona from "../assets/plan-evolucion.png";
+import planClasico from "../assets/plan-clasico.png";
+import planViva from "../assets/plan-viva.png";
+import planGlobal from "../assets/plan-global.png";
+
 ---
 
 <!-- Interactive Feature Cards -->
@@ -24,20 +32,16 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
       <!-- Feature Card 1 -->
-      <div class="feature-card relative h-full transform duration-500 hover:-translate-y-2 cursor-pointer">
+      <div class="feature-card h-full cursor-pointer">
         <div class="card border-none p-6 md:p-8 h-full bg-primary1-50 dark:bg-primary-900/30">
-          <div
-            class="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-primary1-50 dark:bg-primary-900/30 flex items-center justify-center mb-4 md:mb-6"
-          >
-          <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-10 h-10 md:w-8 md:h-8 text-primary-600 dark:text-primary-400"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-          ><path
-            d="M12 4.595a5.904 5.904 0 0 0-3.996-1.558 5.942 5.942 0 0 0-4.213 1.758c-2.353 2.363-2.352 6.059.002 8.412l7.332 7.332c.17.299.498.492.875.492a.99.99 0 0 0 .792-.409l7.415-7.415c2.354-2.354 2.354-6.049-.002-8.416a5.938 5.938 0 0 0-4.209-1.754A5.906 5.906 0 0 0 12 4.595zm6.791 1.61c1.563 1.571 1.564 4.025.002 5.588L12 18.586l-6.793-6.793c-1.562-1.563-1.561-4.017-.002-5.584.76-.756 1.754-1.172 2.799-1.172s2.035.416 2.789 1.17l.5.5a.999.999 0 0 0 1.414 0l.5-.5c1.512-1.509 4.074-1.505 5.584-.002z"
-          ></path></svg
-        >
+          
+          <div class="card-image">
+            <Image
+              src={planViva}
+              alt="Mascota"
+              class="w-full h-32 object-cover rounded-lg mb-4"
+            />
+
           </div>
           <h3 class="text-2xl font-semibold mb-3 text-secondary-900 dark:text-white">
             Plan Vive Sura
@@ -47,7 +51,7 @@
           </p>
           <div class="mt-5">
             <a
-              href="https://www.susegurosb.com/plan-vive-sura/"
+              href="https://asesor.segurossura.com.co/Paginas/salud.aspx?U=CarlosMauricioFarfanPerdomo&C=34073"
               target="_blank"
               class="flex items-center text-primary-600 dark:text-primary-400 hover:underline transition-colors"
             >
@@ -69,36 +73,26 @@
       </div>
 
       <!-- Feature Card 2 -->
-      <div class="feature-card relative h-full transform duration-500 hover:-translate-y-2 cursor-pointer">
+      <div class="feature-card h-full cursor-pointer">
         <div class="card border-none p-6 md:p-8 h-full bg-primary1-50 dark:bg-primary-900/30">
-          <div
-            class="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-primary1-50 dark:bg-primary-900/30 flex items-center justify-center mb-4 md:mb-6"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="w-10 h-10 md:w-8 md:h-8 text-primary-600 dark:text-primary-400"
-              ><path
-                d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"
-              ></path></svg
-            >
+          
+          <div class="card-image">
+            <Image
+              src={planEvoluciona}
+              alt="Mascota"
+              class="w-full h-32 object-cover rounded-lg mb-4"
+            />
+
           </div>
           <h3 class="text-2xl font-semibold mb-3 text-secondary-900 dark:text-white">
-            Seguro de viaje
+            Plan Salud Evoluciona
           </h3>
           <p class="text-gray-600 dark:text-gray-300">
-            En tus vacaciones viaja tranquilo a cualquier destino con SURA
+            Disfruta de un plan integral con excelentes coberturas.
           </p>
           <div class="mt-5">
             <a
-              href="https://www.susegurosb.com/plan-vive-sura/"
+              href="https://asesor.segurossura.com.co/Paginas/salud.aspx?U=CarlosMauricioFarfanPerdomo&C=34073"
               target="_blank"
               class="flex items-center text-primary-600 dark:text-primary-400 hover:underline transition-colors"
             >
@@ -121,29 +115,140 @@
 
 
       <!-- Feature Card 3 -->
-      <div class="feature-card relative h-full transform duration-500 hover:-translate-y-2 cursor-pointer">
+      <div class="feature-card h-full cursor-pointer">
         <div class="card border-none p-6 md:p-8 h-full bg-primary1-50 dark:bg-primary-900/30">
-          <div
-            class="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-primary1-50 dark:bg-primary-900/30 flex items-center justify-center mb-4 md:mb-6"
-          >
-          <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="w-10 h-10 md:w-8 md:h-8 text-primary-600 dark:text-primary-400"
-          ><circle cx="11" cy="4" r="2"></circle><circle
-            cx="18"
-            cy="8"
-            r="2"></circle><circle cx="20" cy="16" r="2"></circle><path
-            d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"
-          ></path></svg
-        >
+          
+          <div class="card-image">
+            <Image
+              src={planClasico}
+              alt="Mascota"
+              class="w-full h-32 object-cover rounded-lg mb-4"
+            />
+
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-secondary-900 dark:text-white">
+            Plan Salud Clásico
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Servicios médicos y clínicos de acuerdo a tus necesidades.
+          </p>
+          <div class="mt-5">
+            <a
+              href="https://asesor.segurossura.com.co/Paginas/salud.aspx?U=CarlosMauricioFarfanPerdomo&C=34073"
+              target="_blank"
+              class="flex items-center text-primary-600 dark:text-primary-400 hover:underline transition-colors"
+            >
+              Conoce más
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                class="ms-2"
+                fill="currentColor"
+                class="ms-2"
+                ><path
+                  d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+                ></path></svg
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Card 4 -->
+      <div class="feature-card h-full cursor-pointer">
+        <div class="card border-none p-6 md:p-8 h-full bg-primary1-50 dark:bg-primary-900/30">
+          
+  
+          <div class="card-image">
+            <Image
+              src={planGlobal}
+              alt="Mascota"
+              class="w-full h-32 object-cover rounded-lg mb-4"
+            />
+
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-secondary-900 dark:text-white">
+            Plan Salud Global
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Accede a una mayor cobertura, tanto en Colombia como fuera del país.
+          </p>
+          <div class="mt-5">
+            <a
+              href="https://asesor.segurossura.com.co/Paginas/salud.aspx?U=CarlosMauricioFarfanPerdomo&C=34073"
+              target="_blank"
+              class="flex items-center text-primary-600 dark:text-primary-400 hover:underline transition-colors"
+            >
+              Conoce más
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                class="ms-2"
+                fill="currentColor"
+                class="ms-2"
+                ><path
+                  d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+                ></path></svg
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Card 5 -->
+      <div class="feature-card h-full cursor-pointer">
+        <div class="card border-none p-6 md:p-8 h-full bg-primary1-50 dark:bg-primary-900/30">
+  
+          <div class="card-image">
+            <Image
+              src={travelCard}
+              alt="Mascota"
+              class="w-full h-32 object-cover rounded-lg mb-4"
+            />
+
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-secondary-900 dark:text-white">
+            Seguro de viaje
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            En tus vacaciones viaja tranquilo a cualquier destino con SURA
+          </p>
+          <div class="mt-5">
+            <a
+            href="https://wa.me/573186298233?text=Hola,%20me%20gustaría%20recibir%20asesoría%20personalizada%20para%20seguros%20de%20viajes"
+              target="_blank"
+              class="flex items-center text-primary-600 dark:text-primary-400 hover:underline transition-colors"
+            >
+              Conoce más
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                class="ms-2"
+                fill="currentColor"
+                class="ms-2"
+                ><path
+                  d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+                ></path></svg
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Card 6 -->
+      <div class="feature-card h-full cursor-pointer">
+        <div class="card border-none p-6 md:p-8 h-full bg-primary1-50 dark:bg-primary-900/30">
+          
+          <div class="card-image">
+            <Image
+              src={petCard}
+              alt="Mascota"
+              class="w-full h-32 object-cover rounded-lg mb-4"
+            />
+
           </div>
           <h3 class="text-2xl font-semibold mb-3 text-secondary-900 dark:text-white">
             Salud Perros y Gatos
@@ -153,7 +258,7 @@
           </p>
           <div class="mt-5">
             <a
-              href="https://www.susegurosb.com/plan-vive-sura/"
+              href="https://wa.me/573186298233?text=Hola,%20me%20gustaría%20recibir%20asesoría%20personalizada%20para%20seguros%20de%20mascotas"
               target="_blank"
               class="flex items-center text-primary-600 dark:text-primary-400 hover:underline transition-colors"
             >
@@ -184,5 +289,41 @@
   background-size: cover;
   background-position: center;
 } */
+
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+.feature-card:hover {
+  transform: scale(1.05);
+}
+
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+} 
+.card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+
+
+
 
 </style>
