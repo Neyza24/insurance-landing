@@ -11,5 +11,7 @@ export default defineConfig({
     
   ],
   site: 'https://Neyza24.github.io',
-  base: 'insurance-landing',
+  /** Without Custom Domain */
+  //base: 'insurance-landing',
+  base: '/',
 });
